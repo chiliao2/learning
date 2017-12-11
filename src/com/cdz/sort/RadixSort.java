@@ -22,12 +22,7 @@ public class RadixSort {
      */
     public void radixSort(Integer[] array, Integer radix, Integer divisor) {
         for (int i = 0; i < array.length; i++) {
-            Integer remainder;
-            if (divisor == null) {
-                remainder = array[i] % radix;
-            } else {
-                remainder = array[i] / divisor % radix;
-            }
+            Integer remainder = array[i] / divisor % radix;
             temp.get(remainder).addLast(array[i]);
         }
         int j = 0;

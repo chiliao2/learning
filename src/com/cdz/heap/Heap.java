@@ -83,7 +83,12 @@ public class Heap {
         return true;
     }
 
-    public void sort(Integer[] array) {
+    /**
+     * 堆排序
+     *
+     * @param array
+     */
+    public void heapSort(Integer[] array) {
         for (int i = 0; i < array.length; i++) {
             insert(array[i]);
         }
@@ -108,7 +113,7 @@ public class Heap {
 //        Integer[] array = {2, 8, 6, 4, 1, 5, 9, 7, 3, 44};
 //        Arrays.asList(array).forEach(i -> System.out.print(i + ","));
 //        System.out.println();
-//        heap.sort(array);
+//        heap.heapSort(array);
 //        Arrays.asList(array).forEach(i -> System.out.print(i + ","));
     }
 }

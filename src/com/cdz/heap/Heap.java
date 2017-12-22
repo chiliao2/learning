@@ -1,7 +1,5 @@
 package com.cdz.heap;
 
-import java.util.Arrays;
-
 public class Heap {
     private Integer[] array;
     private Integer items = 0;

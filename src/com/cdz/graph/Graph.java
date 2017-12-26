@@ -14,6 +14,10 @@ public class Graph {
     //边
     private Integer[][] edges;
 
+    public Integer getVertexNum() {
+        return vertices.size();
+    }
+
     public Graph(Integer vertexNum) {
         vertices = new ArrayList<>(vertexNum);
         edges = new Integer[vertexNum][vertexNum];

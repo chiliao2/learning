@@ -1,7 +1,7 @@
 package com.cdz.graph;
 
 public class Vertex {
-    private String name;
+    public String name;
     public boolean isVisited = false;
 
     public Vertex(String name) {

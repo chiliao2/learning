@@ -151,13 +151,14 @@ public class SparseGraphWithWeightedGraph {
 
         public void mstw() {
             while (nTree < nVerts) {
-                vertices.get(currentVert).isInTree = true;
+                Vertex vertex = vertices.get(currentVert);
+                vertex.isInTree = true;
                 nTree++;
                 for (int i = 0; i < nVerts; i++) {
                     if (currentVert == i) {
                         continue;
                     }
-                    if (vertices.get(i).isInTree) {
+                    if (vertex.isInTree) {
                         continue;
                     }
                     Integer weight = adjMat[currentVert][i];

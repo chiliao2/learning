@@ -150,7 +150,7 @@ public class SparseGraphWithWeightedGraph {
         }
 
         public void mstw() {
-            while (nTree < nVerts - 1) {
+            while (nTree < nVerts) {
                 vertices.get(currentVert).isInTree = true;
                 nTree++;
                 for (int i = 0; i < nVerts; i++) {

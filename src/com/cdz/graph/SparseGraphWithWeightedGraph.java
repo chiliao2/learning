@@ -154,18 +154,18 @@ public class SparseGraphWithWeightedGraph {
                 Vertex vertex = vertices.get(currentVert);
                 vertex.isInTree = true;
                 nTree++;
-                for (int i = 0; i < nVerts; i++) {
-                    if (currentVert == i) {
+                for (int newVert = 1; newVert < nVerts; newVert++) {
+                    if (currentVert == newVert) {
                         continue;
                     }
-                    if (vertex.isInTree) {
+                    if (vertices.get(newVert).isInTree) {
                         continue;
                     }
-                    Integer weight = adjMat[currentVert][i];
+                    Integer weight = adjMat[currentVert][newVert];
                     if (weight == null) {
                         continue;
                     }
-                    putInPQ(i, weight);
+                    putInPQ(newVert, weight);
                 }
                 if (p.isEmpty()) {
                     System.out.println("can not connected");

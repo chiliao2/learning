@@ -156,10 +156,10 @@ public class ChartWithRights {
                     }
                 }
                 Edge min = pq.removeMin();
-                currentVert = min.dest;
-                nTree++;
                 System.out.print(min.src);
                 System.out.print(min.dest);
+                currentVert = min.dest;
+                nTree++;
                 System.out.println();
             }
         }

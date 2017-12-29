@@ -136,8 +136,8 @@ public class ChartWithRights {
                     if (vertices[i].isIntree) {
                         continue;
                     }
-                    //如果当前顶点到目标顶点的权重值为9999，说明不是直连
 
+                    //如果当前顶点到目标顶点的权重值为9999，说明不是直连
                     Integer weight = weights[currentVert][i];
                     if (weight == inf) {
                         continue;

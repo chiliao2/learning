@@ -1,5 +1,7 @@
 package com.cdz.localdate;
 
+import java.io.*;
+import java.net.Socket;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -15,6 +17,18 @@ public class App {
         print(localDateTime);
         print(localTime);
 
+        int a = 125;
+        String b = Integer.toBinaryString(a);
+        byte[] bb = new byte[16];
+        System.out.println(b);
+        try {
+            InputStream os = new FileInputStream(new File("a.txt"));
+            os.read(bb);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private static void print(Object o) {

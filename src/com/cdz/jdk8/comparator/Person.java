@@ -16,7 +16,7 @@ public class Person {
     public Person() {
     }
 
-    public static final Comparator<Person> firstNameComparator = (lhs, rhs) -> lhs.firstName.compareTo(rhs.firstName);
+    public static final Comparator<Person> firstNameComparator = (lhs, rhs) -> lhs.age - rhs.age;
 
     public String getFirstName() {
         return firstName;
